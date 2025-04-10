@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Acceso</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="joyas.png" />
+</head>
+<body>
+
+</div>
+  <!-- Pantalla de Bienvenida -->
+  <div class="welcome-screen">
+    <h1>Bienvenido a Nuestro Sitio</h1>
+    <p id="auth-message">Por favor, inicia sesión para continuar</p>
+
+    <form class="auth-form" id="login-form">
+      <input type="text" id="username" placeholder="Usuario" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <button type="submit">Iniciar sesión</button>
+    </form>
+    <p id="switch-auth">¿No tienes cuenta? <a href="#" id="show-register">Regístrate aquí</a></p>
+  </div>
+
+</div>
+  <!-- Pantalla de Registro -->
+  <div class="register-screen" style="display: none;">
+    <h1>Crear una Cuenta</h1>
+    <form class="register-form" id="register-form">
+      <input type="text" id="new-username" placeholder="Nuevo Usuario" required>
+      <input type="password" id="new-password" placeholder="Nueva Contraseña" required>
+      <button type="submit">Registrar</button>
+    </form>
+    <p id="switch-to-login">¿Ya tienes cuenta? <a href="#" id="show-login">Inicia sesión aquí</a></p>
+  </div>
+
+  
+
+<!-- Publicidad -->
+<div class="ads" style="display:none;">
+  <h2>Anuncios</h2>
+  <div class="ad-banner">
+      <p>¡Te gusta la joyeria! hacer click para mas informacion.</p>
+      <a href="https://www.instagram.com/solangels.elegance?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+          <img src="banner.png" alt="Descripción del Anuncio" style="width:300px;height:auto;">
+      </a>
+      <button id="ad-click">Haz clic aquí</button>
+  </div>
+</div>
+
+
+  <!-- Contenido del usuario -->
+  <div class="content">
+    <h2>Contenido exclusivo</h2>
+    <button onclick="logout()">Cerrar sesión</button>
+  </div>
+
+  <!-- Acceso a Internet simulado -->
+  <div id="internet-access" style="display: none;">
+    <h2>Acceso a Internet</h2>
+    <iframe src="https://www.wikipedia.org" width="180%" height="800px"></iframe>
+  </div>
+
+  <!-- Panel Admin -->
+  <div id="admin-panel" style="display: none;">
+    <h2>Panel de Administración</h2>
+    <div class="admin-stats">
+      <p>Usuarios Registrados: <span id="admin-user-count">0</span></p>
+      <p>Clics en anuncios: <span id="admin-ad-clicks">0</span></p>
+      <p>Ingresos generados: $<span id="admin-revenue">0.00</span></p>
+    </div>
+    <button onclick="logout()">Cerrar sesión</button>
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
